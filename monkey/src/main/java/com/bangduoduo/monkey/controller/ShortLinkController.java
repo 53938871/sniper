@@ -3,7 +3,6 @@ package com.bangduoduo.monkey.controller;
 import com.bangduoduo.monkey.model.ShortLink;
 import com.bangduoduo.monkey.service.ShortLinkService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +25,7 @@ public class ShortLinkController {
     @RequestMapping(value="{shortUri}",method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.TEMPORARY_REDIRECT)
     public String shortUri(@PathVariable String shortUri) {
-        return "redirect:"+linkService.getShortLink(shortUri).getOriginalUrl();
+        return "redirect:" + linkService.getShortLink(shortUri).getOriginalUrl();
     }
 
     @RequestMapping(value="short-link/create",method = RequestMethod.POST)

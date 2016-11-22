@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectKey;
 
 /**
  * Created by cpeng2 on 11/21/2016.
@@ -17,9 +18,10 @@ public interface ShortLinkMapper {
     ShortLink findById(@Param("name") Long id);
 
     @Results({
-        @Result(property = "shortUrl", column = "SHORT_LINK")
+        @Result(property = "shortUrl", column = "SHORT_LINK"),
+        @Result(property = "originalUrl", column = "ORIGINAL_URL")
     })
-    @Select("SELECT originalUrl FROM SHORT_LINK WHERE SHORT_URL = #{#shortUrl}")
+    @Select("SELECT * FROM SHORT_LINK WHERE SHORT_URL = #{shortUrl}")
     ShortLink findByShortUri(@Param("shortUrl") String shortUrl);
 
     @Insert("INSERT INTO SHORT_LINK(ORIGINAL_URL, SHORT_URL) VALUES(#{originalUrl}, #{shortUrl})")

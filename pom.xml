@@ -9,6 +9,7 @@
     <module>sniper-core</module>
     <module>sniper-web</module>
     <module>bangduoduo</module>
+      <module>monkey</module>
   </modules>
   <packaging>pom</packaging>
 

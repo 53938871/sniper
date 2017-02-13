@@ -1,7 +1,7 @@
 package com.bangduoduo.servlet;
 
 import com.bangduoduo.util.Utils;
-import com.bangduoduo.web.RichTextInitListener;
+import com.bangduoduo.monkey.model.RichTextInitListener;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;

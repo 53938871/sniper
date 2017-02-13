@@ -1,13 +1,12 @@
 package com.bangduoduo.servlet;
 
 import com.bangduoduo.util.Utils;
-import com.bangduoduo.web.RichTextInitListener;
+import com.bangduoduo.monkey.model.RichTextInitListener;
 import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONObject;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
